@@ -1,10 +1,10 @@
 resource "azurerm_resource_group" "web_app_rg" {
-  name     = "tom_hoopers_web_app_group"
+  name     = "tom-hoopers-rg"
   location = "West Europe"
 }
 
 resource "azurerm_service_plan" "web_app_plan" {
-  name                = "hoopers_service_plan"
+  name                = "tom-hoopers-service-plan"
   resource_group_name = azurerm_resource_group.web_app_rg.name
   location            = azurerm_resource_group.web_app_rg.location
   os_type             = "Linux"
@@ -25,10 +25,7 @@ resource "azurerm_linux_web_app" "web_app" {
   }
 
   identity {
-    type = "UserAssigned"
-    identity_ids = [
-        // Github? https://stackoverflow.com/questions/75851651/repository-updatesitesourcecontrol-operation-failed-with-microsoft-web-hosting
-    ]
+    type = "SystemAssigned"
   }
 }
 
@@ -46,13 +43,7 @@ resource "azurerm_app_service_source_control" "source_control" {
   }
 }
 
-variable "github_auth_token" {
-  type        = string
-  description = "Github Auth Token from Github > Developer Settings > Personal Access Tokens > Tokens Classic (needs to have repo permission)"
-}
-
 resource "azurerm_source_control_token" "source_control_token" {
   type         = "GitHub"
   token        = var.github_auth_token
-  token_secret = var.github_auth_token
 }
