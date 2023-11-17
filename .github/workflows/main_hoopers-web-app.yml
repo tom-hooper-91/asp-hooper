@@ -34,6 +34,6 @@ jobs:
       with:
         app-name: hoopers-web-app
         slot-name: Production
-        publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5783829E602E462E9DEB03995AF63A1F }}
+        publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_9446389DDA41440199114FC218632EFC }}
         package: ${{env.DOTNET_ROOT}}/myapp
 
