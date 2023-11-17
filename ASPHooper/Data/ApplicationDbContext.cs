@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using ASPHooper.Models;
 
 namespace ASPHooper.Data
 {
@@ -9,5 +10,6 @@ namespace ASPHooper.Data
             : base(options)
         {
         }
+        public DbSet<ASPHooper.Models.Movie> Movie { get; set; } = default!;
     }
 }
