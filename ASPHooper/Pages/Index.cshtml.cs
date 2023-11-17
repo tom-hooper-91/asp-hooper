@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace asp_hooper.Pages
+namespace ASPHooper.Pages
 {
     public class IndexModel : PageModel
     {

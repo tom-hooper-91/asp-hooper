@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace asp_hooper.Data
+namespace ASPHooper.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {

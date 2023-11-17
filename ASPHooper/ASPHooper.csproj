@@ -4,8 +4,8 @@
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>aspnet-asp_hooper-d5bb6c71-904d-463e-8080-dfe23637c84f</UserSecretsId>
-    <RootNamespace>asp_hooper</RootNamespace>
+    <UserSecretsId>aspnet-ASPHooper-d5bb6c71-904d-463e-8080-dfe23637c84f</UserSecretsId>
+    <RootNamespace>ASPHooper</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
