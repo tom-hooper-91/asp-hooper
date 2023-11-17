@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Migrations;
 using System;
 
-namespace asp_hooper.Data.Migrations
+namespace ASPHooper.Data.Migrations
 {
     public partial class CreateIdentitySchema : Migration
     {
